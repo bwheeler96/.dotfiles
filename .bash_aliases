@@ -5,30 +5,30 @@ alias settings='coda ~/.bash_login'
 alias refresh="source ~/.bash_login; echo '.bash_login sourced'"
 
 alias rm_ds="find . -name '*.DS_Store' -type f -delete"
-alias lsa="ls -al"
-alias pbc="pbcopy"
-alias pbp="pbpaste"
-alias ewc="echo_with_color"
+alias lsa='ls -al'
+alias pbc='pbcopy'
+alias pbp='pbpaste'
+alias ewc='echo_with_color'
 
-alias tlog="tail -100 log/development.log"
-alias tailf="tail -f log/development.log"
-alias tailfp="tail -f log/production.log"
+alias tlog='tail -100 log/development.log'
+alias tailf='tail -f log/development.log'
+alias tailfp='tail -f log/production.log'
 
 
 # ----------------------
 # Applications
 
-alias rube="ruby -e"
-alias yui_compress="java -jar /usr/local/yui/build/yuicompressor-2.4.2.jar"
+alias rube='ruby -e'
+alias yui_compress='java -jar /usr/local/yui/build/yuicompressor-2.4.2.jar'
 
-alias coda="open -a Coda"
-alias pshop="open -a Adobe Photoshop CS5"
-alias fndr="open -a Finder"
-alias sfri="open -a Safari"
+alias coda='open -a Coda'
+alias pshop='open -a Adobe Photoshop CS5'
+alias fndr='open -a Finder'
+alias sfri='open -a Safari'
 alias lh="safari 'http://localhost:3000/'"
-alias itns="open -a iTunes"
+alias itns='open -a iTunes'
 
-alias flush_cache="dscacheutil -flushcache"
+alias flush_cache='dscacheutil -flushcache'
 
 
 # ----------------------
@@ -78,7 +78,7 @@ alias rc='rails c'
 # Rails 2
 
 alias ss='script/server'
-alias sg="script/generate"
+alias sg='script/generate'
 alias sc='script/console'
 alias ssp='ss -e production'
 
@@ -86,7 +86,7 @@ alias ssp='ss -e production'
 # ----------------------
 # Rake
 
-alias dbd="rake db:drop'
+alias dbd='rake db:drop'
 alias dbc='rake db:create'
 alias dbm='rake db:migrate'
 alias dbs='rake db:seed'
