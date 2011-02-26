@@ -1,7 +1,5 @@
-dotfiles
-========
-
 My dotfiles, just like I like 'em.
+==================================
 
 I install them like this
 ------------------------
