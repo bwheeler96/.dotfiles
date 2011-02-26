@@ -7,7 +7,7 @@ I install them like this
 First, I clone the repo into my home folder:
 
     cd ~/
-    git clone git://github.com/citrus/dotfiles
+    git clone git://github.com/citrus/.dotfiles
     
     
 Then I backup the old config:
@@ -20,7 +20,7 @@ Next, I create a new file with `vi .bash_login` and paste this stuff:
     # ----------------------
     # Load dotfiles
 
-    source dotfiles/.bash_login
+    source .dotfiles/.bash_login
 
 
 Then I keep editing with some of my own stuff... Stuff that might not apply to you:
