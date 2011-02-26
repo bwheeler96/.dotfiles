@@ -2,13 +2,14 @@
 # Utils
 
 alias settings='coda ~/.bash_login'
-alias refresh="source ~/.bash_login; echo '.bash_login sourced'"
+alias aliases='coda ~/.dotfiles/.bash_aliases'
+alias functions='coda ~/.dotfiles/.bash_functions'
+alias refresh=". ~/.bash_login; echo '.bash_login sourced'"
 
 alias rm_ds="find . -name '*.DS_Store' -type f -delete"
 alias lsa='ls -al'
 alias pbc='pbcopy'
 alias pbp='pbpaste'
-alias ewc='echo_with_color'
 
 alias tlog='tail -100 log/development.log'
 alias tailf='tail -f log/development.log'

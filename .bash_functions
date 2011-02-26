@@ -14,26 +14,26 @@ purple=35
 cyan=36
 white=37
 
-echo_with_color() {
+ewc() {
   # validate color range
   if [[ $1 -lt 1 || $1 -gt 37 ]]; then
-    echoc 31 "Please specify a valid color value"
-    echoc 37 "  Orange     1  $orange
-  Underline  4  $underline
-  Blinking   5  $blinking 
-  Background 7  $background
-  Black	     30  $black
-  Red	     31  $red
-  Green	     32  $green
-  Yellow     33  $yellow
-  Blue	     34  $blue
-  Purple     35  $purple
-  Cyan	     36  $cyan
-  White      37  $white"
+    ewc 31 "Please specify a valid color value"
+    ewc 37 "  Orange     1   \$orange
+  Underline  4   \$underline
+  Blinking   5   \$blinking 
+  Background 7   \$background
+  Black	     30  \$black
+  Red	     31  \$red
+  Green	     32  \$green
+  Yellow     33  \$yellow
+  Blue	     34  \$blue
+  Purple     35  \$purple
+  Cyan	     36  \$cyan
+  White      37  \$white"
   fi
   if [ -z "$2" ]; then
-    echoc $red "Please specify the text"
-    echoc $white "  echoc 37 'this will be white'"
+    ewc $red "Please specify the text"
+    ewc $cyan "  ewc \$cyan 'this will be cyan'"
     return 1
   fi
   if [[ -n "$1" && -n "$2" ]]; then

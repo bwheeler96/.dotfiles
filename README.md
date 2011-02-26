@@ -9,9 +9,11 @@ First, I clone the repo into my home folder:
     cd ~/
     git clone git://github.com/citrus/dotfiles
     
+    
 Then I backup the old config:
 
     mv .bash_login bash_login.bak
+    
     
 Next, I create a new file with `vi .bash_login` and paste this stuff:
 

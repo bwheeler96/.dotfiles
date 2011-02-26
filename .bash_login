@@ -15,6 +15,6 @@ src() {
 # ----------------------
 # Load dotfiles
 
-src dotfiles/.bash_color
-src dotfiles/.bash_aliases
-src dotfiles/.bash_functions
+src .dotfiles/.bash_color
+src .dotfiles/.bash_aliases
+src .dotfiles/.bash_functions
