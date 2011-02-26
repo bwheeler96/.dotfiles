@@ -1,0 +1,26 @@
+# ----------------------
+# Export
+
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
+
+src() {
+  if [ -f $1 ]; then
+    . $1
+  else
+    echo "$1 could not be found."
+  fi
+}
+
+
+# ----------------------
+# Load Dotfiles
+
+src dotfiles/.bash_color
+src dotfiles/.bash_functions
+src dotfiles/.bash_aliases
+
+
+# ----------------------
+# User Specific
+# 
+# 
