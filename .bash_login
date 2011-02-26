@@ -13,14 +13,8 @@ src() {
 
 
 # ----------------------
-# Load Dotfiles
+# Load dotfiles
 
 src dotfiles/.bash_color
 src dotfiles/.bash_functions
 src dotfiles/.bash_aliases
-
-
-# ----------------------
-# User Specific
-# 
-# 
