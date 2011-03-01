@@ -11,6 +11,9 @@ alias lsa='ls -al'
 alias pbc='pbcopy'
 alias pbp='pbpaste'
 
+alias tarc='tar -czvf'
+alias tarx='tar -xzvf'
+
 alias tlog='tail -100 log/development.log'
 alias tailf='tail -f log/development.log'
 alias tailfp='tail -f log/production.log'
