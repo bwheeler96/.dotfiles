@@ -44,6 +44,19 @@ ewc() {
 
 
 # ----------------------
+# Google
+
+ggl() {
+  echo "$*"
+  if [ -z "$*" ]; then
+    ewc $red "Please specify a search query"
+    return 1
+  fi
+  open -a Safari "http://www.google.com/search?q=$*"
+}
+
+
+# ----------------------
 # MySQL
 
 dbdump() {

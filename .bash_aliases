@@ -97,3 +97,12 @@ alias dbcm='rake db:create db:migrate'
 alias dbcms='rake db:create db:migrate db:seed'
 alias dbreset='rake db:drop db:create db:migrate db:seed'
 alias clearlogs='rake log:clear'
+
+
+# ----------------------
+# Bundler
+
+alias bi='bundle install'
+alias bu='bundle update'
+alias bg='bundle gem'
+
