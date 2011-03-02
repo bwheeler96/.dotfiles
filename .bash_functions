@@ -15,7 +15,6 @@ cyan=36
 white=37
 
 ewc() {
-  # validate color range
   if [[ $1 -lt 1 || $1 -gt 37 ]]; then
     ewc 31 "Please specify a valid color value"
     ewc 37 "  Orange     1   \$orange
@@ -42,7 +41,6 @@ ewc() {
 }
 
 
-
 # ----------------------
 # Google
 
@@ -59,6 +57,14 @@ ggl() {
 # ----------------------
 # MySQL
 
+if [ -z "$MYSQL_HOST" ]; then MYSQL_HOST="localhost"; fi
+if [ -z "$MYSQL_USER" ]; then MYSQL_USER="root"; fi
+if [ -z "$MYSQL_PASS" ]; then MYSQL_PASS=""; fi
+
+dblist() {
+  mysql -h$MYSQL_HOST -u$MYSQL_USER -p$MYSQL_PASS -Bse 'show databases'
+}
+
 dbdump() {
   if [ -z "$1" ]; then
     ewc $red "Please specify which database to dump"
@@ -66,7 +72,7 @@ dbdump() {
   fi
   db="$1_$(date +"%m-%d-%Y_%H-%M-%S").sql"
   ewc $green "> Dumping '$1' to '$db'..."
-  mysqldump -uroot -p -hlocalhost $1 > $db
+  mysqldump -h$MYSQL_HOST -u$MYSQL_USER -p$MYSQL_PASS $1 > $db
   if [ $? -eq 0 ]; then
     ewc $green "> Created:"
     ewc $cyan "  $PWD/$db"
@@ -93,8 +99,7 @@ dbload() {
   fi
   if [[ -n "$1" && -n "$2" ]]; then
     ewc $green "> Loading '$2' into '$1'..."
-    _mysql $1 < $2
-    
+    mysql -h$MYSQL_HOST -u$MYSQL_USER -p$MYSQL_PASS $1 < $2
     if [ $? -eq 0 ]; then
       ewc $green "> Loaded:"
       ewc $cyan "  $2"
