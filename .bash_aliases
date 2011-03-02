@@ -5,9 +5,13 @@ alias settings='coda ~/.bash_login'
 alias aliases='coda ~/.dotfiles/.bash_aliases'
 alias functions='coda ~/.dotfiles/.bash_functions'
 alias refresh=". ~/.bash_login; echo '.bash_login sourced'"
+alias .update='cd ~/.dotfiles; gplom; refresh'
+
 
 alias rm_ds="find . -name '*.DS_Store' -type f -delete"
 alias lsa='ls -al'
+alias ..='cd ..'
+alias ...='cd ../../'
 alias pbc='pbcopy'
 alias pbp='pbpaste'
 

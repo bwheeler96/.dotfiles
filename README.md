@@ -40,6 +40,20 @@ Then I keep editing with some of my own stuff... Stuff that might not apply to y
     alias citrudev="ssh -p xxxx citrus@xx.xx.xx.xx"
 
     ... you get the idea
+    
+    
+I setup my mysql variables so I can use `dblist` and `dbdump my_database` without being prompted for my password.
+
+    MYSQL_HOST="localhost" # default
+    MYSQL_USER="citrus" # default is 'root'
+    MYSQL_PASS="my-password" # default is blank
+
+
+When I've updated my dotfiles and want to update on another machine, I just run:
+
+    .update
+
+
 
 
 License
