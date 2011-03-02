@@ -52,6 +52,7 @@ alias gi='gem install'
 alias bi='bundle install'
 alias bu='bundle update'
 alias bg='bundle gem'
+alias be='bundle exec'
 
 
 # ----------------------
