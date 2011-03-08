@@ -66,6 +66,7 @@ alias gca='git commit -a -v -m'
 alias gp='git push'
 alias gpl='git pull'
 alias gb='git branch'
+alias gt='git tag'
 alias gcl='git clone'
 alias gco='git checkout'
 alias gpom='git push origin master'
@@ -73,6 +74,14 @@ alias gpoc='git push origin citrus'
 alias gplom='git pull origin master'
 alias gploc='git pull origin citrus'
 alias glog='git log'
+
+
+# ----------------------
+# Capistrano
+
+alias caprs='cap deploy:restart'
+alias capd='cap deploy'
+alias capdc='cap deploy:cold'
 
 
 # ----------------------
