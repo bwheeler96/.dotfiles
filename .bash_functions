@@ -42,10 +42,31 @@ ewc() {
 
 
 # ----------------------
+# To Lowercase (needs work)
+
+to_lower() {
+  for i in *; do
+    mv -f "$i" `echo "$i" | tr "[:upper:]" "[:lower:]"`
+  done
+}
+
+
+# ----------------------
+# Increment
+ 
+# increment() {
+#   count=0
+#   for i in *; do
+#     count=`expr $count + 1`
+#     mv -f "$i" `echo "$count.jpg"`
+#   done
+# }
+
+
+# ----------------------
 # Google
 
 ggl() {
-  echo "$*"
   if [ -z "$*" ]; then
     ewc $red "Please specify a search query"
     return 1

@@ -5,7 +5,7 @@ alias settings='coda ~/.bash_login'
 alias aliases='coda ~/.dotfiles/.bash_aliases'
 alias functions='coda ~/.dotfiles/.bash_functions'
 alias refresh=". ~/.bash_login; echo '.bash_login sourced'"
-alias .update='cd ~/.dotfiles; gplom; refresh'
+alias .update='LAST=$PWD; cd ~/.dotfiles; gplom; refresh; cd $LAST'
 
 
 alias rm_ds="find . -name '*.DS_Store' -type f -delete"
@@ -21,6 +21,8 @@ alias tarx='tar -xzvf'
 alias tlog='tail -100 log/development.log'
 alias tailf='tail -f log/development.log'
 alias tailfp='tail -f log/production.log'
+
+alias loc='sloccount'
 
 
 # ----------------------
@@ -69,11 +71,14 @@ alias gb='git branch'
 alias gt='git tag'
 alias gcl='git clone'
 alias gco='git checkout'
-alias gpom='git push origin master'
-alias gpoc='git push origin citrus'
-alias gplom='git pull origin master'
-alias gploc='git pull origin citrus'
+alias gpo='git push origin'
+alias gplo='git pull origin'
+alias gpom='gpo master'
+alias gpoc='gpo citrus'
+alias gplom='gplo master'
+alias gploc='gplo citrus'
 alias glog='git log'
+alias gsho='git show'
 
 
 # ----------------------
@@ -130,4 +135,5 @@ alias dbrb='rake db:rollback'
 alias dbcm='rake db:create db:migrate'
 alias dbcms='rake db:create db:migrate db:seed'
 alias dbreset='rake db:drop db:create db:migrate db:seed'
+alias dbtest='rake db:drop db:create db:schema:load RAILS_ENV=test'
 alias clearlogs='rake log:clear'
