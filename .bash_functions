@@ -42,28 +42,6 @@ ewc() {
 
 
 # ----------------------
-# To Lowercase (needs work)
-
-to_lower() {
-  for i in *; do
-    mv -f "$i" `echo "$i" | tr "[:upper:]" "[:lower:]"`
-  done
-}
-
-
-# ----------------------
-# Increment
- 
-# increment() {
-#   count=0
-#   for i in *; do
-#     count=`expr $count + 1`
-#     mv -f "$i" `echo "$count.jpg"`
-#   done
-# }
-
-
-# ----------------------
 # Google
 
 ggl() {
@@ -155,6 +133,7 @@ how() {
     if [ -z "$2" ]; then
       clear
       cat $help
+      echo
     else
       coda $help
     fi
