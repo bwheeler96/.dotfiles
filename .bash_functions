@@ -146,6 +146,25 @@ shoty() {
 
 
 # ----------------------
+# Coding Helpers
+
+how() { 
+  help=~/RoR/help/$1.rb
+  if [ -f $help ]; then
+    echo "help found.. $help"
+    if [ -z "$2" ]; then
+      clear
+      cat $help
+    else
+      coda $help
+    fi
+  else
+    echo "Help file '$help' could not be found"
+  fi
+}
+
+
+# ----------------------
 # Hardcore Cache Clear
 
 fuck_my_cache() {

@@ -8,6 +8,8 @@ alias refresh=". ~/.bash_login; echo '.bash_login sourced'"
 alias .update='LAST=$PWD; cd ~/.dotfiles; gplom; refresh; cd $LAST'
 
 
+
+alias rm_gitkeep="find . -name '*.gitkeep' -type f -delete"
 alias rm_ds="find . -name '*.DS_Store' -type f -delete"
 alias lsa='ls -al'
 alias ..='cd ..'
@@ -51,6 +53,7 @@ alias gi='gem install'
 # ----------------------
 # Bundler
 
+alias bundle='b'
 alias bi='bundle install'
 alias bu='bundle update'
 alias bg='bundle gem'
@@ -88,6 +91,7 @@ alias gsho='git show'
 alias caprs='cap deploy:restart'
 alias capd='cap deploy'
 alias capdc='cap deploy:cold'
+alias capdt='cap deploy:tail'
 
 
 # ----------------------
@@ -111,9 +115,9 @@ alias _mysql='mysql -uroot -p -hlocalhost'
 
 alias rait='rails s thin'
 alias raitp='rails s thin -e production'
+alias trs='touch tmp/restart.txt'
 alias rg='rails g'
 alias rc='rails c'
-alias watch='watchr ~/.watchr/rails.rb'
 
 
 # ----------------------
@@ -135,9 +139,10 @@ alias dbs='rake db:seed'
 alias dbv='rake db:version'
 alias dbrb='rake db:rollback'
 alias dbcm='rake db:create db:migrate'
-alias dbmd='rake db:migrate:down'
-alias dbmu='rake db:migrate:up'
+alias dbdu='rake db:migrate:down db:migrate'
 alias dbcms='rake db:create db:migrate db:seed'
+alias dbtrs='rake db:drop db:create db:migrate RAILS_ENV=test'
+alias dbrs='rake db:drop db:create db:migrate db:seed; dbtrs'
 alias dbreset='rake db:drop db:create db:migrate db:seed'
 alias dbtest='rake db:drop db:create db:schema:load RAILS_ENV=test'
 alias clearlogs='rake log:clear'
