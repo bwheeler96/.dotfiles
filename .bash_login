@@ -1,7 +1,9 @@
 # ----------------------
 # Export
 
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH:$HOME/.rbenv/bin"
+
+eval "$(rbenv init -)"
 
 src() {
   if [ -f $1 ]; then
