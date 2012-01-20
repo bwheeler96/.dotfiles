@@ -25,7 +25,7 @@ alias tailf='tail -f log/development.log'
 alias tailfp='tail -f log/production.log'
 
 alias loc='sloccount'
-
+alias curo='curl -O'
 
 # ----------------------
 # Applications
@@ -53,11 +53,11 @@ alias gi='gem install'
 # ----------------------
 # Bundler
 
-alias bundle='b'
 alias bi='bundle install'
 alias bu='bundle update'
 alias bg='bundle gem'
 alias be='bundle exec'
+alias beh='bundle exec heroku'
 
 
 # ----------------------
@@ -133,18 +133,19 @@ alias ssp='ss -e production'
 # ----------------------
 # Rake
 
-alias dbd='rake db:drop'
-alias dbc='rake db:create'
-alias dbm='rake db:migrate'
-alias dbs='rake db:seed'
-alias dbv='rake db:version'
-alias dbrb='rake db:rollback'
-alias dbcm='rake db:create db:migrate'
-alias dbdu='rake db:migrate:down db:migrate'
-alias dbcms='rake db:create db:migrate db:seed'
-alias dbtrs='rake db:drop db:create db:migrate RAILS_ENV=test'
-alias dbrs='rake db:drop db:create db:migrate db:seed; dbtrs'
-alias dbreset='rake db:drop db:create db:migrate db:seed'
-alias dbtest='rake db:drop db:create db:schema:load RAILS_ENV=test'
-alias precomp='rake assets:precompile RAILS_ENV=production'
-alias clearlogs='rake log:clear'
+alias brake='bundle exec rake'
+alias dbd='brake db:drop'
+alias dbc='brake db:create'
+alias dbm='brake db:migrate'
+alias dbs='brake db:seed'
+alias dbv='brake db:version'
+alias dbrb='brake db:rollback'
+alias dbcm='brake db:create db:migrate'
+alias dbdu='brake db:migrate:down db:migrate'
+alias dbcms='brake db:create db:migrate db:seed'
+alias dbtrs='brake db:drop db:create db:migrate RAILS_ENV=test'
+alias dbrs='brake db:drop db:create db:migrate db:seed; dbtrs'
+alias dbreset='brake db:drop db:create db:migrate db:seed'
+alias dbtest='brake db:drop db:create db:schema:load RAILS_ENV=test'
+alias precomp='brake assets:precompile RAILS_ENV=production'
+alias clearlogs='brake log:clear'
