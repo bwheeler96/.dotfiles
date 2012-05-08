@@ -27,10 +27,14 @@ alias tailfp='tail -f log/production.log'
 alias loc='sloccount'
 alias curo='curl -O'
 
+alias lorem='wordy | pbc'
+
 # ----------------------
 # Applications
 
 alias rube='ruby -e'
+alias berb='be ruby -I lib -I test'
+
 alias yui_compress='java -jar /usr/local/yui/build/yuicompressor-2.4.2.jar'
 
 alias coda='open -a Coda'
@@ -54,7 +58,9 @@ alias gi='gem install'
 # Bundler
 
 alias bi='bundle install'
+alias bil='bundle install --local'
 alias bu='bundle update'
+alias bul='bundle update --local'
 alias bg='bundle gem'
 alias be='bundle exec'
 alias beh='bundle exec heroku'
@@ -100,7 +106,7 @@ alias capdt='cap deploy:tail'
 
 alias ghero='git push heroku master'
 alias hu='heroku'
-
+alias kmd='bundle exec kumade'
 
 # ----------------------
 # MySQL
