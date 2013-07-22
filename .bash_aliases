@@ -69,7 +69,6 @@ alias beh='bundle exec heroku'
 # ----------------------
 # Git
 
-alias git='hub'
 alias gst='git status'
 alias ga='git add'
 alias gc='git commit -v -m'
